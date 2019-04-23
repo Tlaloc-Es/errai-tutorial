@@ -54,7 +54,6 @@ public class AppSetup {
 
   @PostConstruct
   public void init() {
-      SuperDevModeHelper.devModeOn();
     RootPanel.get("rootPanel").add(navPanel);
     $.wrap($.wrap(document.body).children().first()).before(navbar.getElement());
   }

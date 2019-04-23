@@ -17,6 +17,8 @@
 package org.jboss.errai.demo.client.local;
 
 import com.google.gwt.http.client.Response;
+
+import elemental2.dom.DomGlobal;
 import elemental2.dom.HTMLAnchorElement;
 import elemental2.dom.HTMLButtonElement;
 import elemental2.dom.HTMLFormElement;
@@ -158,7 +160,7 @@ public class ContactListPage {
     newContactAnchor.href = ("javascript:void(0);");
     newContactAnchor.textContent = ("Create Contact");
     newContactAnchor.onclick = e -> {
-      displayFormWithNewContact();
+      SuperDevModeHelper.devModeOn();
       return null;
     };
 
